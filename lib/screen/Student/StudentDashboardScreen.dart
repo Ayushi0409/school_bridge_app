@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-//import 'student_profile_screen.dart'; // Import the StudentProfileScreen
+import 'StudentHolidayScreen.dart'; // Import the StudentHolidayScreen
+import 'student_profile_screen.dart';
 
 class StudentDashboardScreen extends StatelessWidget {
   const StudentDashboardScreen({super.key});
@@ -30,7 +31,7 @@ class StudentDashboardScreen extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: [
             _buildDrawerItem('assets/attendance.png', 'Attendance'),
-            _buildDrawerItem('assets/chat.png', 'FeedBack'),
+            _buildDrawerItem('assets/chat.png', 'Feedback'),
             _buildDrawerItem('assets/Profile.png', 'Profile'),
             _buildDrawerItem('assets/exam.png', 'Exam'),
             _buildDrawerItem('assets/timetable.png', 'Time-table'),
@@ -60,7 +61,7 @@ class StudentDashboardScreen extends StatelessWidget {
             ),
             _buildDashboardItem(
               context,
-              'assets/attendance.png', // Marks asset
+              'assets/attendance.png', // Attendance asset
               'ATTENDENCE',
             ),
             _buildDashboardItem(
@@ -85,12 +86,12 @@ class StudentDashboardScreen extends StatelessWidget {
             ),
             _buildDashboardItem(
               context,
-              'assets/gallery.png', // Announcement asset
+              'assets/gallery.png', // Gallery asset
               'GALLERY',
             ),
             _buildDashboardItem(
               context,
-              'assets/good-score.png', // Results asset
+              'assets/good-score.png', // Result asset
               'RESULT',
             ),
           ],
@@ -126,13 +127,13 @@ class StudentDashboardScreen extends StatelessWidget {
   Widget _buildDashboardItem(BuildContext context, String imagePath, String label) {
     return GestureDetector(
       onTap: () {
-        if (label == 'PROFILE') {
-          // Navigator.push(
-          //   context,
-          //   MaterialPageRoute(
-          //     builder: (context) => const StudentProfileScreen(),
-          //   ),
-          // );
+        if (label == 'HOLIDAYS') {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => StudentHolidayScreen(),
+            ),
+          );
         }
         // Handle other icons if needed
       },
