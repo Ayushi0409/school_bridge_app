@@ -74,7 +74,7 @@ class _ForgetScreenState extends State<ForgetScreen> {
               controller: _idNumberController,
               decoration: InputDecoration(
                 labelText: 'ID Number',
-                hintText: 'Enter your ID number',
+                hintText: 'Enter your ID Number',
                 prefixIcon: Icon(Icons.perm_identity),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
