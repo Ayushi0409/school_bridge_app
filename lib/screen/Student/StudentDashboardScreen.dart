@@ -108,7 +108,7 @@ class StudentDashboardScreen extends StatelessWidget {
           Image.asset(
             imagePath,
             width: 40,
-            height: 40,
+            height: 39,
           ),
           const SizedBox(width: 20),
           Text(
